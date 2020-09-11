@@ -13,18 +13,30 @@
 
 <script>
   import List from '@/vue/Components/List';
+  import Api from '@/scripts/mixins/_api';
+  const API_URL = '/assets/data/dammy.json';
 
   export default {
     components: {
       List
     },
+    mixins: [ Api ],
     name: 'Hello',
     data () {
       return {
         msg: 'Hello',
-        listItem: [1, 2, 3, 4, 5]
+        listItem: []
       }
     },
+    async created() {
+      await this.getData();
+    },
+    methods: {
+      async getData() {
+        const res = await this.mixinGetData(API_URL);
+        this.listItem = res.list;
+      }
+    }
   }
 </script>
 
