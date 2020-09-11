@@ -1,11 +1,18 @@
 const webpack = require('webpack');
-const config = require('config');
 const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 const glob = require('glob');
 const { VueLoaderPlugin } = require("vue-loader");
 const entries = {};
-const isProd = process.env.NODE_ENV === 'production';
+const minimist = require('minimist');
+const config = {
+  string: 'env',
+  default: {
+    env: process.env.NODE_ENV || 'dev'
+  }
+}
+const options = minimist(process.argv.slice(2), config);
+const isProd = ( options.env === 'prod' );
 const modeValue = ( isProd ) ? 'production' : 'development';
 
 glob.sync('./src/scripts/*.js', {

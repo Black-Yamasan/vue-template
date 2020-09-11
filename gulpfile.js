@@ -12,6 +12,7 @@ const gulpif = require('gulp-if');
 const browserSync = require('browser-sync').create();
 const runSequence = require('gulp4-run-sequence');
 const webpackConfig = require('./webpack.config');
+const minimist = require('minimist');
 
 const destDir = './dist/';
 const prodDir = './htdocs/';
@@ -19,7 +20,8 @@ const config = {
 	string: 'env',
 	default: { env: process.env.NODE_ENV || 'dev'}
 }
-const isProd = process.env.NODE_ENV === 'production';
+const options = minimist(process.argv.slice(2), config);
+const isProd = ( options.env === 'prod' );
 
 gulp.task('browser-sync', () => {
   browserSync.init({
