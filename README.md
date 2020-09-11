@@ -21,12 +21,6 @@
 ```
 ├── README.md
 ├── babel.config.js
-├── config
-│   ├── default.json
-│   └── production.json
-├── dist
-│   ├── assets
-│   └── index.html
 ├── gulpfile.js
 ├── package.json
 ├── src
