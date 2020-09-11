@@ -2,16 +2,22 @@
   <div class="l-wrap">
     <h2 class="c-heading">{{ msg }}</h2>
     <ul class="c-list">
-      <li class="c-list__child"
+      <List class="c-list__child"
         v-for="(list, key) in listItem"
         :key="key"
-        >List{{list}}</li>
+        :listProps="`List${list}`"
+      />
     </ul>
   </div>
 </template>
 
 <script>
+  import List from '@/vue/Components/List';
+
   export default {
+    components: {
+      List
+    },
     name: 'Hello',
     data () {
       return {

@@ -13,31 +13,26 @@ exports[`Hello Component snapshot 1`] = `
   <ul
     class="c-list"
   >
-    <li
+    <list-stub
       class="c-list__child"
-    >
-      List1
-    </li>
-    <li
+      listprops="List1"
+    />
+    <list-stub
       class="c-list__child"
-    >
-      List2
-    </li>
-    <li
+      listprops="List2"
+    />
+    <list-stub
       class="c-list__child"
-    >
-      List3
-    </li>
-    <li
+      listprops="List3"
+    />
+    <list-stub
       class="c-list__child"
-    >
-      List4
-    </li>
-    <li
+      listprops="List4"
+    />
+    <list-stub
       class="c-list__child"
-    >
-      List5
-    </li>
+      listprops="List5"
+    />
   </ul>
 </div>
 `;
