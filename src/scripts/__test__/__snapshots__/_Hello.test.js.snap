@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello Component snapshot 1`] = `
+<div
+  class="l-wrap"
+>
+  <h2
+    class="c-heading"
+  >
+    Hello
+  </h2>
+   
+  <ul
+    class="c-list"
+  >
+    <li
+      class="c-list__child"
+    >
+      List1
+    </li>
+    <li
+      class="c-list__child"
+    >
+      List2
+    </li>
+    <li
+      class="c-list__child"
+    >
+      List3
+    </li>
+    <li
+      class="c-list__child"
+    >
+      List4
+    </li>
+    <li
+      class="c-list__child"
+    >
+      List5
+    </li>
+  </ul>
+</div>
+`;
