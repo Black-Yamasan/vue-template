@@ -1,5 +1,18 @@
 @import '../config';
+@import '../reset';
+
+
+html {
+  font-size: percentage(10/16);
+}
 
 body {
   color: $DEFAULT_COLOR;
+  font-size: 1.6rem;
+  letter-spacing: 100/1000+em;
+  line-height: percentage(20/16);
+}
+
+.l-wrap {
+  padding: 50px 20px;
 }
