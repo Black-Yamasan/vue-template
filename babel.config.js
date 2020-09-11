@@ -11,6 +11,22 @@ module.exports = {
         corejs: 3.6,
         modules: false,
       },
-    ],
+    ]
   ],
+  env: {
+    test: {
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: {
+              node: 'current'
+            },
+            useBuiltIns: 'entry',
+            corejs: 3.6
+          }
+        ]
+      ],
+    }
+  }
 };
