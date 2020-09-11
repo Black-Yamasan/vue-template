@@ -73,13 +73,21 @@ gulp.task('webpack', () => {
   .pipe(gulpif(isProd, gulp.dest(prodDir)))
 });
 
+
+gulp.task('data', () => {
+  return gulp.src(['src/data/**/*'])
+  .pipe(gulpif(!isProd, gulp.dest(destDir + 'assets/data/')))
+  .pipe(gulpif(isProd, gulp.dest(prodDir + 'assets/data/')))
+});
+
+
 gulp.task('bs-reload', () => {
   browserSync.reload();
 });
 
 
 gulp.task('build', gulp.series(
-  gulp.parallel('sass', 'webpack', 'html', 'images')
+  gulp.parallel('sass', 'webpack', 'html', 'images', 'data')
 ));
 
 
