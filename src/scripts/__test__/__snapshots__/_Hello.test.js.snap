@@ -9,10 +9,10 @@ exports[`Hello Component snapshot 1`] = `
   >
     Hello
   </h2>
-   
   <ul
     class="c-list"
   >
+    
     <list-stub
       class="c-list__child"
       listprops="List1"
@@ -33,6 +33,7 @@ exports[`Hello Component snapshot 1`] = `
       class="c-list__child"
       listprops="List5"
     />
+    
   </ul>
 </div>
 `;
