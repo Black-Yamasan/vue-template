@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 const glob = require('glob');
-const { VueLoaderPlugin } = require("vue-loader");
+const { VueLoaderPlugin } = require('vue-loader');
 const entries = {};
 const minimist = require('minimist');
 const config = {
@@ -81,8 +81,7 @@ module.exports = {
         {
           loader: 'sass-loader',
           options: {
-            sourceMap: !isProd,
-            // outputStyle: 'expanded'
+            sourceMap: !isProd
           }
         }
       ]
@@ -115,7 +114,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
+      'vue$': 'vue/dist/vue.esm-bundler.js',
       '@': path.resolve(__dirname, 'src'),
     }
   }
