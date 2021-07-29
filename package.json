@@ -1,6 +1,6 @@
 {
   "name": "vue-template",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Vue.jsテンプレート",
   "main": "index.js",
   "author": "Black-Yamasan",
@@ -75,7 +75,7 @@
     "vue-jest": "5.0.0-alpha.7",
     "vue-loader": "16.1.2",
     "webpack": "5.47.0",
-    "webpack-stream": "^6.1.2"
+    "webpack-stream": "6.1.2"
   },
   "dependencies": {
     "core-js": "3",
