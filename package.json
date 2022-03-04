@@ -1,6 +1,6 @@
 {
   "name": "vue-template",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Vue.jsテンプレート",
   "main": "index.js",
   "author": "Black-Yamasan",
@@ -11,6 +11,10 @@
     "prod": "npx gulp build --env prod",
     "test": "jest",
     "lint:style": "stylelint --fix src/styles/**/*.scss"
+  },
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
   },
   "jest": {
     "moduleFileExtensions": [
